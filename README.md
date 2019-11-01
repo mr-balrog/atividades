@@ -3,7 +3,7 @@ atividade diogo
 
 <p>Vagrant</p>
 
-<p>1º Criar pasta Vagrant</p>
+<p>1º Criar diretorio Vagrant</p>
 mkdir vagrant
 <p></p>
 <p>2° Instalar vagrant</p>
@@ -68,14 +68,17 @@ user = nginx group = nginx
 
 <p>4º Iniciar e habilitar o php</p>
 sudo systemctl start php-fpm
+<p></p>
 <p>sudo systemctl enable php-fpm</p>
 
 <p>Configurar o Nginx para processar páginas PHP</p>
 
-<p>1° Criar o arquivo:
+<p>1° Criar o arquivo:</p>
 sudo vim /etc/nginx/conf.d/default.conf
-2° Na linha  server_name  localhost (Inserir o ip);
+<p></p>
+<p>2° Na linha  server_name  localhost (Inserir o ip);</p>
 após a alteração reiniciar o nginx
+
 sudo systemctl restart nginx</p>
 
 <p>Teste o processamento PHP no seu servidor Web
