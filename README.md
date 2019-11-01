@@ -5,13 +5,13 @@ atividade diogo
 
 <p>1º Criar pasta Vagrant</p>
 mkdir vagrant
-2° Instalar vagrant
+<p>2° Instalar vagrant</p>
 apt-get install vagrant
-3° baixar a imagem cento ( pegar o nome da image que deseja subir na maq virtual )
+<p>3° baixar a imagem cento ( pegar o nome da image que deseja subir na maq virtual )</p>
 https://app.vagrantup.com/boxes/search
-4° Criar vagrant file
+<p>4° Criar vagrant file</p>
 vagrant init
-5° Editar o vagrant file
+<p>5° Editar o vagrant file</p>
 vim vagrantfile
 descomentar e editar a linha “config.vm.box = (colocar o nome da iso)”
 descomentar a linha “config.vm.network "private_network", ip: "192.168.33.11"
