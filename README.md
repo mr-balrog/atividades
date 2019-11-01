@@ -3,7 +3,7 @@ atividade diogo
 
 <p>Vagrant</p>
 
-<p>1º Criar pasta Vagrant
+<p>1º Criar pasta Vagrant</p>
 mkdir vagrant
 2° Instalar vagrant
 apt-get install vagrant
