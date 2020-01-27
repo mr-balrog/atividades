@@ -63,7 +63,8 @@ sudo yum install php
 vim /etc/php-fpm.d/www.conf
 <p></p>
 <p>Alterar a linha que definem o user e o group  altere seus valores de “apache” para “nginx” ( para que o php tenha comunicação com o nginx)</p>
-user = nginx group = nginx
+user = nginx <p></p> 
+group = nginx
 <p></p>
 
 <p>4º Iniciar e habilitar o php</p>
