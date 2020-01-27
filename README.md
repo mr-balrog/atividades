@@ -108,7 +108,7 @@ mv * /usr/share/nginx/html/</p>
 <p> Criar a VM para o banco de dados </p>
 "vagrant init centos/7"
 Editar o Vagrantfile
-"vim Vagrantfile
+"vim Vagrantfile"
 
 
 
