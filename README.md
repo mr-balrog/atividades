@@ -82,12 +82,11 @@ após a alteração reiniciar o nginx
 
 sudo systemctl restart nginx</p>
 
-<p>Teste o processamento PHP no seu servidor Web
-1° Podemos criar o arquivo nesse local digitando:
+<p>Teste o processamento PHP
+Criar o arquivo info.php:
 sudo vim /usr/share/nginx/html/info.php
 <?php phpinfo(); ?>
-Salve e saia do arquivo
-Para testes basta acessar o endereço que você deseja visitar será:
+Para testar
 Abra em um navegador da web:
 http: // endereço<em>do</em>servidor<em>IP</em>do_servidor /info.php</p>
 
