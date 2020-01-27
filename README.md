@@ -92,13 +92,15 @@ sudo systemctl restart nginx</p>
 
 <p>Wordpress</p>
 
-<p>1° download do wordpress
+<p>1° download do wordpress</p>
 wget http://wordpress.org/latest.zip
-2° descompactar o arquivo.zip
-unzip latest.zip
-3° mover o diretório wordpress para diretório /usr/share/nginx/html/
-mv * /usr/share/nginx/html/
-4° Dar permissão para wordpress
-chown nginx.nginx -R *
-5° Abrir o wordpress no navegador
-http://192.168.33.11/wp-admin/setup-config.php?step=0</p>
+<p>2° descompactar o arquivo.zip</p>
+<p>unzip latest.zip</p>
+<p>3° mover o diretório wordpress para diretório /usr/share/nginx/html/
+mv * /usr/share/nginx/html/</p>
+<p>4° Alterar o dono do arquivo</p>
+<p>chown nginx.nginx -R *</p>
+<p>5° Abrir o wordpress no navegador</p>
+<p>http://192.168.33.11/wp-admin/setup-config.php?step=0</p>
+
+#Configurando o banco de dados remoto para otimizar o desempenho do site
