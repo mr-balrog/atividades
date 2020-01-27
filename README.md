@@ -109,7 +109,7 @@ mv * /usr/share/nginx/html/</p>
 '''vagrant init centos/''' &nbsp;
 Editar o Vagrantfile
 "vim Vagrantfile"
-
+"código embutido"
 
 
 
