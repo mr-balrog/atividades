@@ -103,4 +103,13 @@ mv * /usr/share/nginx/html/</p>
 <p>5° Abrir o wordpress no navegador</p>
 <p>http://192.168.33.11/wp-admin/setup-config.php?step=0</p>
 
-# Configurando o banco de dados remoto para otimizar o desempenho do site
+## Configurando o banco de dados remoto para otimizar o desempenho do site
+
+<p> Criar a VM para o banco de dados </p>
+"vagrant init centos/7"&nbsp;
+Editar o Vagrantfile
+"vim Vagrantfile
+
+
+
+
