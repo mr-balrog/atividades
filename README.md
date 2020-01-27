@@ -106,10 +106,67 @@ mv * /usr/share/nginx/html/</p>
 ## Configurando o banco de dados remoto para otimizar o desempenho do site
 
 <p> Criar a VM para o banco de dados </p>
-'''vagrant init centos/''' &nbsp;
-Editar o Vagrantfile
-"vim Vagrantfile"
-"código embutido"
+<p> Criar diretorio Vagrant</p>
+mkdir vmb
+<p></p>
+<p> Criar vagrant file</p>
+vagrant init
+<p></p>
+<p>5° Editar o vagrant file</p>
+vim vagrantfile
+<p></p>
+<p>descomentar e editar a linha “config.vm.box = (colocar o nome da iso)”</p>
+<p></p>
+<p>descomentar a linha “config.vm.network "private_network", ip: "192.168.33.20"</p>
+<p></p>
+<p>config.vm.provider "virtualbox" do |vb|</p>
+<p></p>
+<p>descomentar a vb.memory = "1024":</p>
+<p></p>
+<p> Conectar no vagrant </p>
+vagrant ssh
+<p></p>
 
+<p>1° Adicionar o repositório do Centos 7 EPEL</P>
+sudo yum install epel-release
+<p></p>
+<p>Mysql ou MariaDB</p>
 
+<p>1° Instalar</p>
+sudo yum install mariadb-server mariadb
+<p></p>
+<p>2° Iniciar o banco</p>
+sudo systemctl start mariadb
+<p></p>
+<p> Rodar a query mysql_secure_installation para setar uma senha para o usuário root e remover contas anônimas, banco teste.
+sudo mysql<em>secure</em>installation
+<p></p>
+Configurando um banco de dados wordpress e acesso remoto
+banco
+
+mysql>   CRIAR DATABASE wordpress;
+
+Criando um usuario local
+
+mysql> CREATE USER 'wordpressuser'@'localhost' IDENTIFIED BY 'password';
+
+concedendo privilegio
+
+mysql> GRANT ALL PRIVILEGES ON wordpress.* TO 'wordpressuser'@'localhost';
+
+Criando um usuário para conexão remota
+
+mysql> CREATE USER 'wordpressuser'@'web-server_ip' IDENTIFIED BY 'password';
+
+Concedendo previlegio
+
+GRANT ALL PRIVILEGES ON wordpress.* TO 'wordpressuser'@'web_server_ip';
+
+Liberar os privilegios e gravar no disco
+
+mysql> FLUSH PRIVILEGES;
+
+Sair do banco
+
+mysql> exit
 
