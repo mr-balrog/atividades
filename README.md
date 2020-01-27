@@ -82,13 +82,13 @@ após a alteração reiniciar o nginx
 
 sudo systemctl restart nginx</p>
 
-<p>Teste o processamento PHP
-Criar o arquivo info.php:
-sudo vim /usr/share/nginx/html/info.php
+<p>Teste o processamento PHP</p>
+<p>Criar o arquivo info.php:</p>
+<p>sudo vim /usr/share/nginx/html/info.php</p>
 <?php phpinfo(); ?>
-Para testar
-Abra em um navegador da web:
-http: // endereço<em>do</em>servidor<em>IP</em>do_servidor /info.php</p>
+<p>Para testar</p>
+<p>Abra em um navegador da web:</p>
+<p>http: // endereço<em>do</em>servidor<em>IP</em>do_servidor /info.php</p></p>
 
 <p>Wordpress</p>
 
