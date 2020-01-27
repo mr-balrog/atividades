@@ -106,7 +106,7 @@ mv * /usr/share/nginx/html/</p>
 ## Configurando o banco de dados remoto para otimizar o desempenho do site
 
 <p> Criar a VM para o banco de dados </p>
-"vagrant init centos/7"
+'''vagrant init centos/'''
 Editar o Vagrantfile
 "vim Vagrantfile"
 
