@@ -56,7 +56,7 @@ https://app.vagrantup.com/boxes/search**
 
 ```sudo systemctl enable mariadb```
 
-# php
+# Php
 
 ## Instalar PHP
 
@@ -66,12 +66,11 @@ https://app.vagrantup.com/boxes/search**
 
 ```vim /etc/php-fpm.d/www.conf```
 
-*Alterar a linha que definem o user e o group  altere seus valores de “apache” para “nginx” ( para que o php tenha comunicação com o nginx)
+*Alterar a linha que definem o user e o group  altere seus valores de “apache” para “nginx” ( para que o php tenha comunicação com o nginx)*
 
 - user = nginx
 
 - group = nginx
-*
 
 **Iniciar e habilitar o php**
 
@@ -85,7 +84,7 @@ https://app.vagrantup.com/boxes/search**
 
 ```sudo vim /etc/nginx/conf.d/default.conf```
 
-*Na linha  server_name  localhost (Inserir o ip);
+*Na linha  server_name  localhost (Inserir o ip);*
 
 Após a alteração reiniciar o nginx
 
@@ -99,7 +98,7 @@ Após a alteração reiniciar o nginx
 
 **Insira o codigo:**
 
-<?php phpinfo(); ?>
+```<?php phpinfo(); ?>```
 
 **Salva e fecha o arquivo**
 
@@ -113,7 +112,7 @@ Após a alteração reiniciar o nginx
 
 # Wordpres
 
-**download do wordpress*
+**download do wordpress**
 
 ```wget http://wordpress.org/latest.zip```
 
@@ -135,7 +134,7 @@ Após a alteração reiniciar o nginx
 
 # Configurando o banco de dados remoto para otimizar o desempenho do site
 
-###Criar a VM para o banco de dados###
+### Criar a VM para o banco de dados
 
 **Criar diretorio Vagrant**
 
@@ -146,7 +145,7 @@ Após a alteração reiniciar o nginx
   ```vagrant init``` 
 
 
-**Editar o vagrant file
+**Editar o vagrant file**
 
 ```vim vagrantfile```
 
