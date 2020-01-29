@@ -103,14 +103,14 @@ mv * /usr/share/nginx/html/</p>
 <p>5° Abrir o wordpress no navegador</p>
 <p>http://192.168.33.11/wp-admin/setup-config.php?step=0</p>
 
-## Configurando o banco de dados remoto para otimizar o desempenho do site
+# Configurando o banco de dados remoto para otimizar o desempenho do site
 
 ### Criar a VM para o banco de dados
 
-> Criar diretorio Vagrant
-- mkdir vmb
-**Criar vagrant file**
-- vagrant init
+** Criar diretorio Vagrant**
+> mkdir vmb
+<p> **Criar vagrant file**</p> 
+> vagrant init
 
 <p>5° Editar o vagrant file</p>
 vim vagrantfile
