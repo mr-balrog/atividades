@@ -108,23 +108,18 @@ mv * /usr/share/nginx/html/</p>
 ### Criar a VM para o banco de dados
 
 **Criar diretorio Vagrant**
-> mkdir vmb </p>
+- mkdir vmb
 **Criar vagrant file**
-> vagrant init
+- vagrant init
+**Editar o vagrant file**
+- vim vagrantfile
+- descomentar e editar a linha “config.vm.box = (colocar o nome da iso)”
+- descomentar a linha “config.vm.network "private_network", ip: "192.168.33.20"
+- config.vm.provider "virtualbox" do |vb|
+- descomentar a vb.memory = "1024"
 
-<p>5° Editar o vagrant file</p>
-vim vagrantfile
-<p></p>
-<p>descomentar e editar a linha “config.vm.box = (colocar o nome da iso)”</p>
-<p></p>
-<p>descomentar a linha “config.vm.network "private_network", ip: "192.168.33.20"</p>
-<p></p>
-<p>config.vm.provider "virtualbox" do |vb|</p>
-<p></p>
-<p>descomentar a vb.memory = "1024":</p>
-<p></p>
-<p> Conectar no vagrant </p>
-vagrant ssh
+**Conectar no vagrant**
+- vagrant ssh
 <p></p>
 
 <p>1° Adicionar o repositório do Centos 7 EPEL</P>
