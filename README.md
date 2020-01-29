@@ -1,107 +1,137 @@
-# atividades
-atividade diogo
+#Atividades#
 
-<p>Vagrant</p>
+##Instalar vagrant##
 
-<p>1º Criar diretorio Vagrant</p>
-mkdir vagrant
-<p></p>
-<p>2° Instalar vagrant</p>
-apt-get install vagrant
-<p></p>
-<p>3° baixar a imagem cento ( pegar o nome da image que deseja subir na maq virtual )</p>
-https://app.vagrantup.com/boxes/search
-<p></p>
-<p>4° Criar vagrant file</p>
-vagrant init
-<p></p>
-<p>5° Editar o vagrant file</p>
-vim vagrantfile
-<p></p>
-<p>descomentar e editar a linha “config.vm.box = (colocar o nome da iso)”</p>
-<p></p>
-<p>descomentar a linha “config.vm.network "private_network", ip: "192.168.33.11"</p>
-<p></p>
-<p>config.vm.provider "virtualbox" do |vb|</p>
-<p></p>
-<p>descomentar a vb.memory = "1024":</p>
-<p></p>
-<p>6º Conectar no vagrant </p>
-vagrant ssh
-<p></p>
-<p>Nginx</p>
+**Criar diretorio Vagrant**
 
-<p>1° Adicionar o repositório do Centos 7 EPEL</P>
-sudo yum install epel-release
-<p></p>
-<p>2° sudo yum install nginx</p>
 
-<p>Mysql ou MariaDB</p>
+```mkdir vagrant```
 
-<p>1° Instalar</p>
-sudo yum install mariadb-server mariadb
-<p></p>
-<p>2° Iniciar o banco</p>
-sudo systemctl start mariadb
-<p></p>
-<p>3° Executar um script de segurança para remova alguns padrões perigosos e bloqueie o acesso ao sistema</p>
-sudo mysql<em>secure</em>installation
-<p></p>
-<p>4° Permitir que o banco inicie na inicialização</p>
-sudo systemctl enable mariadb
-<p></p>
+**Instalar vagrant**
 
-<p>PHP</p>
+```apt-get install vagrant```
 
-<p>1° Instalar o repositório</p>
-sudo yum-config-manager --enable remi-php72
-<p></p>
-<p>2° Instalar php</p>
-sudo yum install php
-<p></p>
-<p>3° Editar /etc/ṕhp-fpm.d/www.conf</p>
-vim /etc/php-fpm.d/www.conf
-<p></p>
-<p>Alterar a linha que definem o user e o group  altere seus valores de “apache” para “nginx” ( para que o php tenha comunicação com o nginx)</p>
-user = nginx <p></p> 
-group = nginx
-<p></p>
+**Baixar a imagem cento ( pegar o nome da image que deseja subir na maq virtual )
+https://app.vagrantup.com/boxes/search**
 
-<p>4º Iniciar e habilitar o php</p>
-sudo systemctl start php-fpm
-<p></p>
-<p>sudo systemctl enable php-fpm</p>
+*Criar vagrant file*
 
-<p>Configurar o Nginx para processar páginas PHP</p>
+```vagrant init```
 
-<p>1° Criar o arquivo:</p>
-sudo vim /etc/nginx/conf.d/default.conf
-<p></p>
-<p>2° Na linha  server_name  localhost (Inserir o ip);</p>
-após a alteração reiniciar o nginx
+**Editar o vagrant file**
 
-sudo systemctl restart nginx</p>
+```vim vagrantfile```
 
-<p>Teste o processamento PHP</p>
-<p>Criar o arquivo info.php:</p>
-<p>sudo vim /usr/share/nginx/html/info.php</p>
+- descomentar e editar a linha “config.vm.box = (colocar o nome da iso)”</p>
+- descomentar a linha “config.vm.network "private_network", ip: "192.168.33.11"</p>
+- config.vm.provider "virtualbox" do |vb|</p>
+- descomentar a vb.memory = "1024":</p>
+
+**Conectar no vagrant**
+
+```vagrant ssh```
+
+##Nginx##
+
+**Adicionar o repositório do Centos 7 EPEL**
+
+```sudo yum install epel-release```
+
+```sudo yum install nginx```
+
+##Instalando##
+
+```sudo yum install mariadb-server mariadb```
+
+**Iniciar o banco**
+
+```sudo systemctl start mariadb```
+
+*Executar um script de segurança para remova alguns padrões perigosos e bloqueie o acesso ao sistema*
+
+```sudo mysqlsecureinstallation```
+
+
+**Permitir que o banco inicie na inicialização**
+
+```sudo systemctl enable mariadb```
+
+#php#
+
+##Instalar PHP##
+
+```sudo yum install php```
+
+**Editar /etc/ṕhp-fpm.d/www.conf**
+
+```vim /etc/php-fpm.d/www.conf```
+
+*Alterar a linha que definem o user e o group  altere seus valores de “apache” para “nginx” ( para que o php tenha comunicação com o nginx)
+
+- user = nginx
+
+- group = nginx
+*
+
+**Iniciar e habilitar o php**
+
+```sudo systemctl start php-fpm```
+
+```sudo systemctl enable php-fpm```
+
+##Configurar o Nginx para processar páginas PHP##
+
+**Criar o arquivo**
+
+```sudo vim /etc/nginx/conf.d/default.conf```
+
+*Na linha  server_name  localhost (Inserir o ip);
+
+Após a alteração reiniciar o nginx
+
+```sudo systemctl restart nginx</p>```
+
+##Teste o processamento PHP##
+
+**Criar o arquivo info.php:**
+
+```sudo vim /usr/share/nginx/html/info.php```
+
+**Insira o codigo:**
+
 <?php phpinfo(); ?>
-<p>Para testar</p>
-<p>Abra em um navegador da web:</p>
-<p>http: // endereço<em>do</em>servidor<em>IP</em>do_servidor /info.php</p></p>
 
-<p>Wordpress</p>
+**Salva e fecha o arquivo**
 
-<p>1° download do wordpress</p>
-wget http://wordpress.org/latest.zip
-<p>2° descompactar o arquivo.zip</p>
-<p>unzip latest.zip</p>
-<p>3° mover o diretório wordpress para diretório /usr/share/nginx/html/
-mv * /usr/share/nginx/html/</p>
-<p>4° Alterar o dono do arquivo</p>
-<p>chown nginx.nginx -R *</p>
-<p>5° Abrir o wordpress no navegador</p>
-<p>http://192.168.33.11/wp-admin/setup-config.php?step=0</p>
+```:wr```
+
+**Para testar**
+
+**Abra em um navegador da web:**
+
+- http://endenrecoIPdoservidor/info.php
+
+#Wordpress#
+
+**download do wordpress*
+
+```wget http://wordpress.org/latest.zip```
+
+**descompactar o arquivo.zip**
+
+```unzip latest.zip```
+
+**Mover o diretório wordpress para diretório /usr/share/nginx/html/**
+
+```mv * /usr/share/nginx/html/</p>```
+
+**Alterar o dono do arquivo**
+
+```chown nginx.nginx -R *```
+
+**Abrir o wordpress no navegador**
+
+- http://192.168.33.11/wp-admin/setup-config.php?step=0
 
 # Configurando o banco de dados remoto para otimizar o desempenho do site
 
@@ -134,7 +164,7 @@ mv * /usr/share/nginx/html/</p>
 ```sudo yum install epel-release```
 
 
-##Instalando MariaDB
+**Instalando MariaDB**
 
 ```sudo yum install mariadb-server mariadb```
 
@@ -142,20 +172,23 @@ mv * /usr/share/nginx/html/</p>
 
 ```sudo systemctl start mariadb```
 
-*Rodar a query mysql_secure_installation para setar uma senha para o usuário root e remover contas anônimas, banco teste*
+*Executar um script de segurança para remova alguns padrões perigosos e bloqueie o acesso ao sistema*
 
 ```sudo mysql<em>secure</em>installation```
 
+**Permitir que o banco inicie na inicialização**
+
+```sudo systemctl enable mariadb```
 
 **Configurando o banco de dados para acesso remoto**
 
-```mysql>   CRIAR DATABASE wordpress```
+```mysql>   CRIAR DATABASE wordpress;```
 
 **Criando um usuario local**
 
 ```mysql> CREATE USER 'wordpressuser'@'localhost' IDENTIFIED BY 'password';```
 
-**concedendo privilegio**
+**Concedendo privilegio**
 
 ```mysql> GRANT ALL PRIVILEGES ON wordpress.* TO 'wordpressuser'@'localhost';```
 
