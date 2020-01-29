@@ -108,7 +108,7 @@ mv * /usr/share/nginx/html/</p>
 ### Criar a VM para o banco de dados
 
 **Criar diretorio Vagrant**
-> mkdir vmb
+> mkdir vmb </p>
 **Criar vagrant file**
 > vagrant init
 
