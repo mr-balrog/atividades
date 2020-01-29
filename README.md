@@ -109,7 +109,7 @@ mv * /usr/share/nginx/html/</p>
 
 ** Criar diretorio Vagrant**
 > mkdir vmb
-<p> **Criar vagrant file**</p> 
+<p> **Criar vagrant file** </p> 
 > vagrant init
 
 <p>5° Editar o vagrant file</p>
