@@ -108,11 +108,13 @@ mv * /usr/share/nginx/html/</p>
 ### Criar a VM para o banco de dados
 
 **Criar diretorio Vagrant**
-<p>*mkdir vmb*</p>
-<p></p>
+
+- mkdir vmb
+
+
 **Criar vagrant file**
-*vagrant init*
-**Editar o vagrant file**
+```vagrant init``` 
+**Editar o vagrant file
 *vim vagrantfile
 descomentar e editar a linha “config.vm.box = (colocar o nome da iso)”
 descomentar a linha “config.vm.network "private_network", ip: "192.168.33.20"
