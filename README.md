@@ -106,8 +106,8 @@ mv * /usr/share/nginx/html/</p>
 ## Configurando o banco de dados remoto para otimizar o desempenho do site
 
 <p> Criar a VM para o banco de dados </p>
-<p> Criar diretorio Vagrant</p>
-mkdir vmb
+> Criar diretorio Vagrant
+```mkdir vmb```
 <p></p>
 <p> Criar vagrant file</p>
 vagrant init
