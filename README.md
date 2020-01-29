@@ -109,11 +109,13 @@ mv * /usr/share/nginx/html/</p>
 
 **Criar diretorio Vagrant**
 
-- mkdir vmb
-
+```mkdir vmb```
 
 **Criar vagrant file**
+
 ```vagrant init``` 
+
+
 **Editar o vagrant file
 *vim vagrantfile
 descomentar e editar a linha “config.vm.box = (colocar o nome da iso)”
