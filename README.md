@@ -1,6 +1,6 @@
-# Atividades#
+# Atividades
 
-## Instalar vagrant##
+## Instalar vagrant
 
 **Criar diretorio Vagrant**
 
@@ -31,7 +31,7 @@ https://app.vagrantup.com/boxes/search**
 
 ```vagrant ssh```
 
-##Nginx##
+## Nginx
 
 **Adicionar o repositório do Centos 7 EPEL**
 
@@ -39,7 +39,7 @@ https://app.vagrantup.com/boxes/search**
 
 ```sudo yum install nginx```
 
-##Instalando##
+## Instalando
 
 ```sudo yum install mariadb-server mariadb```
 
@@ -56,9 +56,9 @@ https://app.vagrantup.com/boxes/search**
 
 ```sudo systemctl enable mariadb```
 
-#php#
+# php
 
-##Instalar PHP##
+## Instalar PHP
 
 ```sudo yum install php```
 
@@ -79,7 +79,7 @@ https://app.vagrantup.com/boxes/search**
 
 ```sudo systemctl enable php-fpm```
 
-##Configurar o Nginx para processar páginas PHP##
+## Configurar o Nginx para processar páginas PHP
 
 **Criar o arquivo**
 
@@ -91,7 +91,7 @@ Após a alteração reiniciar o nginx
 
 ```sudo systemctl restart nginx</p>```
 
-##Teste o processamento PHP##
+## Teste o processamento PHP
 
 **Criar o arquivo info.php:**
 
@@ -111,7 +111,7 @@ Após a alteração reiniciar o nginx
 
 - http://endenrecoIPdoservidor/info.php
 
-#Wordpress#
+# Wordpres
 
 **download do wordpress*
 
