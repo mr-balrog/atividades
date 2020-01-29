@@ -109,64 +109,69 @@ mv * /usr/share/nginx/html/</p>
 
 **Criar diretorio Vagrant**
 
-```mkdir vmb```
+  ```mkdir vmb```
 
 **Criar vagrant file**
 
-```vagrant init``` 
+  ```vagrant init``` 
 
 
 **Editar o vagrant file
-*vim vagrantfile
-descomentar e editar a linha “config.vm.box = (colocar o nome da iso)”
-descomentar a linha “config.vm.network "private_network", ip: "192.168.33.20"
-config.vm.provider "virtualbox" do |vb|
-descomentar a vb.memory = "1024"*
+
+```vim vagrantfile```
+
+- descomentar e editar a linha “config.vm.box = (colocar o nome da iso)”
+- descomentar a linha “config.vm.network "private_network", ip: "192.168.33.20"
+- config.vm.provider "virtualbox" do |vb|
+- descomentar a vb.memory = "1024"*
 
 **Conectar no vagrant**
-- vagrant ssh
-<p></p>
 
-<p>1° Adicionar o repositório do Centos 7 EPEL</P>
-sudo yum install epel-release
-<p></p>
-<p>Mysql ou MariaDB</p>
+```vagrant ssh```
 
-<p>1° Instalar</p>
-sudo yum install mariadb-server mariadb
-<p></p>
-<p>2° Iniciar o banco</p>
-sudo systemctl start mariadb
-<p></p>
-<p> Rodar a query mysql_secure_installation para setar uma senha para o usuário root e remover contas anônimas, banco teste.
-sudo mysql<em>secure</em>installation
-<p></p>
-Configurando um banco de dados wordpress e acesso remoto
-banco
+**Adicionar o repositório do Centos 7 EPEL**
 
-mysql>   CRIAR DATABASE wordpress;
+```sudo yum install epel-release```
 
-Criando um usuario local
 
-mysql> CREATE USER 'wordpressuser'@'localhost' IDENTIFIED BY 'password';
+##Instalando MariaDB
 
-concedendo privilegio
+```sudo yum install mariadb-server mariadb```
 
-mysql> GRANT ALL PRIVILEGES ON wordpress.* TO 'wordpressuser'@'localhost';
+**Iniciar o banco**
 
-Criando um usuário para conexão remota
+```sudo systemctl start mariadb```
 
-mysql> CREATE USER 'wordpressuser'@'web-server_ip' IDENTIFIED BY 'password';
+*Rodar a query mysql_secure_installation para setar uma senha para o usuário root e remover contas anônimas, banco teste*
 
-Concedendo previlegio
+```sudo mysql<em>secure</em>installation```
 
-GRANT ALL PRIVILEGES ON wordpress.* TO 'wordpressuser'@'web_server_ip';
 
-Liberar os privilegios e gravar no disco
+**Configurando o banco de dados para acesso remoto**
 
-mysql> FLUSH PRIVILEGES;
+```mysql>   CRIAR DATABASE wordpress;```
 
-Sair do banco
+**Criando um usuario local**
 
-mysql> exit
+```mysql> CREATE USER 'wordpressuser'@'localhost' IDENTIFIED BY 'password';```
+
+**concedendo privilegio**
+
+```mysql> GRANT ALL PRIVILEGES ON wordpress.* TO 'wordpressuser'@'localhost';```
+
+**Criando um usuário para conexão remota**
+
+```mysql> CREATE USER 'wordpressuser'@'web-server_ip' IDENTIFIED BY 'password';```
+
+**Concedendo previlegio**
+
+```GRANT ALL PRIVILEGES ON wordpress.* TO 'wordpressuser'@'web_server_ip';```
+
+**Liberar os privilegios e gravar no disco**
+
+```mysql> FLUSH PRIVILEGES;```
+
+**Sair do banco**
+
+```mysql> exit```
 
