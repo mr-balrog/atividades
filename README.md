@@ -1,6 +1,6 @@
-#Atividades#
+#Atividades
 
-##Instalar vagrant##
+##Instalar vagrant
 
 **Criar diretorio Vagrant**
 
