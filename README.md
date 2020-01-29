@@ -105,7 +105,7 @@ mv * /usr/share/nginx/html/</p>
 
 # Configurando o banco de dados remoto para otimizar o desempenho do site
 
-### Criar a VM para o banco de dados
+###Criar a VM para o banco de dados###
 
 **Criar diretorio Vagrant**
 
@@ -149,7 +149,7 @@ mv * /usr/share/nginx/html/</p>
 
 **Configurando o banco de dados para acesso remoto**
 
-```mysql>   CRIAR DATABASE wordpress;```
+```mysql>   CRIAR DATABASE wordpress```
 
 **Criando um usuario local**
 
